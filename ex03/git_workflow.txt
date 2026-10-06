@@ -1,13 +1,32 @@
+
+Git & GitHub Basic Workflow Guide
+
+1. Edit (Modify):
+   Modify or create files using your code editor (e.g., VS Code or nano). Git detects these changes as 'modified' or 'untracked'.
+
+2. git add <file>:
+   Moves modified or untracked files to the staging area, marking them ready to be committed.
+   Example: git add README.md  (or 'git add .' for all files)
+
+3. git commit -m "message":
+   Saves your staged changes into the local Git history with a brief message explaining what you did.
+   Example: git commit -m "Update README"
+
+4. git push --set-upstream origin main:
+   Uploads your local commits to your remote GitHub repository and links your local branch to the remote 'main' branch.
+
+Example Terminal Session:
+
 $ git status
 On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   README.md
+    modified:   README.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	git_workflow.txt
+    git_workflow.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 $ git add README.md
@@ -15,11 +34,11 @@ $ git status
 On branch main
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   README.md
+    modified:   README.md
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	git_workflow.txt
+    git_workflow.txt
 
 $ git commit -m "Update README"
 [main 6c695de] Update README
@@ -32,4 +51,3 @@ To push the current branch and set the remote as upstream, use
 
 To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
-
